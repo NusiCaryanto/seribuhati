@@ -37,6 +37,35 @@
         Seribu Hati adalah ruang refleksi dan dakwah yang berusaha menyentuh jiwa-jiwa lelah,
         menguatkan mereka yang sedang diuji, dan mengajak kembali kepada kasih sayang Allah ﷻ.
       </p>
+    <!-- CAROUSEL KUTIPAN ISLAMI -->
+    <section class="bg-white py-12">
+      <div class="max-w-2xl mx-auto text-center px-4">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-6">🌙 Kutipan Islami</h3>
+       <div id="carousel" class="text-lg text-gray-700 italic transition-opacity duration-500">
+      🕊️ “La tahzan, innallaha ma’ana.” – QS. At-Taubah: 40
+      </div>
+      </div>
+</section>
+
+<script>
+  const quotes = [
+    '🕊️ “La tahzan, innallaha ma’ana.” – QS. At-Taubah: 40',
+    '🕊️ “Allah tidak membebani seseorang melainkan sesuai kesanggupannya.” – QS. Al-Baqarah: 286',
+    '🕊️ “Maka ingatlah Aku, niscaya Aku ingat (pula) kepadamu.” – QS. Al-Baqarah: 152'
+  ];
+
+  let current = 0;
+  const el = document.getElementById('carousel');
+
+  setInterval(() => {
+    el.classList.add('opacity-0');
+    setTimeout(() => {
+      current = (current + 1) % quotes.length;
+      el.textContent = quotes[current];
+      el.classList.remove('opacity-0');
+    }, 500);
+  }, 5000);
+</script>
     </section>
 
     <!-- KAJIAN -->
