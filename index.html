@@ -71,4 +71,43 @@
     <a href="https://lynk.id/seribuhati" class="inline-block bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Buka Ebook di Lynk.id</a>
   </section>
 
-  <!-- KON
+  <!-- KONTAK -->
+  <section id="kontak" class="bg-pink-50 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-2xl font-semibold text-pink-700 mb-4">Kontak & Sosial Media</h3>
+      <p>📸 Instagram: <a href="https://instagram.com/1000hatii" class="text-pink-600 underline">@1000hatii</a></p>
+      <p>📚 Lynk.id: <a href="https://lynk.id/seribuhati" class="text-pink-600 underline">lynk.id/seribuhati</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-sm text-gray-500 py-8">
+    &copy; 2025 Seribu Hati. All rights reserved.
+  </footer>
+
+  <!-- SCRIPT: Carousel Kutipan -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const quotes = [
+        '🕊️ “La tahzan, innallaha ma’ana.” – QS. At-Taubah: 40',
+        '🕊️ “Allah tidak membebani seseorang melainkan sesuai kesanggupannya.” – QS. Al-Baqarah: 286',
+        '🕊️ “Maka ingatlah Aku, niscaya Aku ingat (pula) kepadamu.” – QS. Al-Baqarah: 152',
+        '🕊️ “Dan hanya kepada Tuhanmulah hendaknya kamu berharap.” – QS. Al-Insyirah: 8'
+      ];
+
+      let current = 0;
+      const el = document.getElementById('carousel');
+
+      setInterval(() => {
+        el.classList.add('opacity-0');
+        setTimeout(() => {
+          current = (current + 1) % quotes.length;
+          el.textContent = quotes[current];
+          el.classList.remove('opacity-0');
+        }, 500);
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
